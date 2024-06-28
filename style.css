@@ -1,0 +1,468 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    height: 7vh;
+    background-color: #33333388;
+}
+
+nav .logo {
+    color: #fff;
+    font-size: 24px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    margin-right: 30px;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    font-size: 2.2vh;
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 20px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+nav ul li a:hover {
+    background-color: rgba(245, 245, 220, 0.336);
+    color: black;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+section {
+    padding: 100px 20px;
+}
+
+#intro {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 80vh;
+    background-image: url('cool-background-1.png');
+    background-position: center;
+    background-size: cover;
+}
+
+.intro-left {
+    max-width: 50%;
+    text-align: right;
+    padding: 0 2vh;
+}
+
+.intro-left h1 {
+    font-size: 48px;
+    color: beige;
+    margin: 0;
+}
+
+.intro-left p {
+    font-size: 24px;
+    color: #A9927D;
+}
+
+.intro-left button {
+    position: relative;
+    width: 50%;
+    padding: 15px 20px;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    background: none;
+    border: 1px solid beige;
+    color: beige;
+    overflow: hidden;
+}
+
+.intro-left button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    color: darkslateblue;
+    background-color: beige;
+    transition: left 0.25s ease-in-out;
+    z-index: 0;
+}
+
+.intro-left button:hover::before {
+    left: 0;
+}
+
+.intro-left button:hover {
+    font-weight: 600;
+    color: darkslateblue;
+    left: 0;
+}
+
+.intro-left button span {
+    position: relative;
+    z-index: 1;
+}
+
+.intro-right {
+    text-align: center;
+}
+
+.intro-right img {
+    max-width: 80%;
+    border-radius: 50%;
+}
+
+#projects,
+#skills,
+#contact {
+    text-align: center;
+}
+
+#projects {
+    background: rgb(123, 68, 147);
+    background: linear-gradient(90deg, rgba(123, 68, 147, 1) 0%, rgba(61, 0, 159, 0.8632046568627451) 53%, rgba(0, 57, 97, 1) 100%);
+    padding: 50px 20px;
+}
+
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.project-card {
+    background-color: rgba(245, 245, 220, 0.726);
+    border-radius: 10px;
+    margin: 20px 50px;
+    padding: 20px;
+    height: 250px;
+    width: 200px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+    background-color: rgba(245, 245, 245);
+    color: darkslateblue;
+    cursor: pointer;
+}
+
+.project-card .image {
+    width: 100%;
+    background-color: black;
+    height: 65%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.project1 {
+    background-image: url(project1.png);
+    background-size: contain;
+}
+
+.project2 {
+    background-image: url(project2.png);
+    background-size: contain;
+}
+
+.project3 {
+    background-image: url(project3.jpeg);
+    background-size: contain;
+}
+
+.project4 {
+    background-image: url(project4.png);
+    background-size: contain;
+}
+
+.project5 {
+    background-image: url(project5.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.project6 {
+    background-image: url(project6.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.project-card .title{
+    position: relative;
+}
+
+.project-card button {
+    position: relative;
+    padding: 10px 30px;
+    border-radius: 20px;
+    cursor: pointer;
+    background-color: darkslateblue;
+    border: none;
+    color: beige;
+    font-weight: 600;
+}
+
+
+#skills {
+    background: rgb(2, 0, 36);
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 0.686734068627451) 35%, rgba(0, 212, 255, 1) 100%);
+    padding: 10px 20px;
+}
+
+.skills-container {
+    text-align: center;
+    padding: 50px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 20px;
+}
+
+.grid-item {
+    background-color: rgba(245, 245, 220, 0.726);
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.2s;
+}
+
+.grid-item:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.grid-item h4 {
+    margin: 10px 0;
+    font-weight: 600;
+    font-size: 4vh;
+}
+
+.grid-item h4 span {
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.469);
+    color: white;
+    border-radius: 10px;
+}
+
+.grid-item:hover h4 span {
+    background-color: rgba(255, 255, 255, 0.507);
+    color: purple;
+}
+
+.grid-item p {
+    color: white;
+}
+
+.grid-item:hover p {
+    color: purple;
+}
+
+.item1 {
+    background-image: url(skill1.jpg);
+    background-repeat: repeat;
+    background-size: contain;
+    background-color: #33333364;
+    grid-column: span 3;
+    grid-row: span 2;
+}
+
+.item2 {
+    background-image: url(skill2.jpeg);
+    background-repeat: repeat;
+    background-size: contain;
+    background-position: center;
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.item3 {
+    background-image: url(skill3.jpg);
+    background-repeat: repeat;
+    background-size: contain;
+    background-position: center;
+    grid-column: span 2;
+    grid-row: span 1;
+}
+
+.item4 {
+    background-image: url(skill4.jpg);
+    background-position: center;
+    grid-column: span 2;
+    grid-row: span 1;
+}
+
+.item5 {
+    background-image: url(skill5.jpeg);
+    grid-column: span 1;
+    grid-row: span 3;
+}
+
+.item6 {
+    background-image: url(skill6.jpeg);
+    background-repeat: repeat;
+    background-size: contain;
+    background-position: center;
+    grid-column: span 4;
+    grid-row: span 2;
+}
+
+#contact {
+    background-image: url("cool-background.png");
+    height: 100vh;
+    background-size: cover;
+}
+
+.contact-container form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-container form label {
+    margin: 10px 0 5px;
+}
+
+.contact-container form input,
+.contact-container form textarea {
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    max-width: 500px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: rgba(245, 245, 220, 0.726);
+    text-align: center;
+}
+
+.contact-container form textarea {
+    text-align: left;
+}
+
+.contact-container form button {
+    position: relative;
+    margin-top: 30px;
+    padding: 10px 50px;
+    border-radius: 20px;
+    font-size: 16px;
+    background: none;
+    border: 1px solid beige;
+    color: beige;
+    font-weight: 600;
+    cursor: pointer;
+    overflow: hidden;
+    outline: none;
+}
+
+.contact-container form button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: darkslateblue;
+    transition: left 0.5s ease-in-out;
+    z-index: 0;
+}
+
+.contact-container form button:hover::before {
+    left: 0;
+}
+
+.contact-container form button span {
+    position: relative;
+    z-index: 1;
+}
+
+@media (max-width: 768px) {
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    #intro {
+        flex-direction: column-reverse;
+    }
+
+    .intro-right img {
+        max-width: 50%;
+        border-radius: 50%;
+    }
+
+    .intro-left {
+        max-width: 50%;
+        text-align: center;
+        padding: 0 2vh;
+    }
+    
+    .intro-left h1 {
+        font-size: 5vh;
+    }
+    
+    .intro-left p {
+        font-size: 3.5vh;
+    }
+
+    .intro-left button {
+        width: 70%;
+    }
+
+    .item1 {
+        grid-column: span 5;
+        grid-row: span 2;
+    }
+
+    .item2 {
+        grid-column: span 5;
+        grid-row: span 2;
+    }
+
+    .item3 {
+        grid-column: span 5;
+        grid-row: span 2;
+    }
+
+    .item4 {
+        grid-column: span 5;
+        grid-row: span 2;
+    }
+
+    .item5 {
+        grid-column: span 5;
+        grid-row: span 2;
+    }
+
+    .item6 {
+        grid-column: span 5;
+        grid-row: span 2;
+    }
+}
+
+@media (max-width: 450px) {
+    nav ul {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

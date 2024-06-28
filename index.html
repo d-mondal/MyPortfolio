@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav>
+        <div class="logo">Portfolio</div>
+        <ul>
+            <li><a href="#intro">Home</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="intro">
+        <div class="intro-left">
+            <h1>Hello, my name is Debarshini Mondal</h1>
+            <p>I am an Engineering Sophomore student.</p>
+            <button onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });"><span>Let's connect!</span></button>
+        </div>
+        <div class="intro-right">
+            <img src="IMG_20231208_015835_734.jpg" alt="Your Photo">
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2 style="color: beige; font-size: 4vh">My Projects</h2>
+        <p style="color: beige; font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">A Showcase of my Experience</p>
+        <div class="projects-container">
+            <div class="project-card">
+                <div class="image project1"></div>
+                <div class="title"><h3>E-Commerce Website</h3></div>
+                <button onclick="this.innerHTML='Visited'; this.style.backgroundColor='#555'; this.style.fontWeight='400';">VISIT</button>
+            </div>
+            <div class="project-card">
+                <div class="image project2"></div>
+                <div class="title"><h3>Expense Tracker</h3></div>
+                <button onclick="this.innerHTML='Visited'; this.style.backgroundColor='#555'; this.style.fontWeight='400';">VISIT</button>
+            </div>
+            <div class="project-card">
+                <div class="image project3"></div>
+                <div class="title"><h3>Music Website</h3></div>
+                <button onclick="this.innerHTML='Visited'; this.style.backgroundColor='#555'; this.style.fontWeight='400';">VISIT</button>
+            </div>
+            <div class="project-card">
+                <div class="image project4"></div>
+                <div class="title"><h3>Spell Checker (ML)</h3></div>
+                <button onclick="this.innerHTML='Visited'; this.style.backgroundColor='#555'; this.style.fontWeight='400';">VISIT</button>
+            </div>
+            <div class="project-card">
+                <div class="image project5"></div>
+                <div class="title"><h3>Tic Tac Toe</h3></div>
+                <button onclick="this.innerHTML='Visited'; this.style.backgroundColor='#555'; this.style.fontWeight='400';">VISIT</button>
+            </div>
+            <div class="project-card">
+                <div class="image project6"></div>
+                <div class="title"><h3>Calculator</h3></div>
+                <button onclick="this.innerHTML='Visited'; this.style.backgroundColor='#555'; this.style.fontWeight='400';">VISIT</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills">
+        <div class="skills-container">
+            <h2 style="color: beige; font-size: 4vh">My Skills & Achievements</h2>
+            <h3 style="color: beige; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">A Journey of Expertise and Accomplishments</h3>
+            <div class="grid-container">
+                <div class="grid-item item1">
+                    <h4><span>Web Development</span></h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam recusandae aperiam quia voluptas tempora quibusdam non facere consequatur eum nobis.</p>
+                </div>
+                <div class="grid-item item2">
+                    <h4><span>Finance</span></h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam recusandae aperiam quia voluptas tempora quibusdam non facere consequatur eum nobis.</p>
+                </div>
+                <div class="grid-item item3">
+                    <h4><span>Case-Studies</span></h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam recusandae aperiam quia voluptas tempora quibusdam non facere consequatur eum nobis.</p>
+                </div>
+                <div class="grid-item item4">
+                    <h4><span>Chess</span></h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam recusandae aperiam quia voluptas tempora quibusdam non facere consequatur eum nobis.</p>
+                </div>
+                <div class="grid-item item5">
+                    <h4><span>AI & ML</span></h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam recusandae aperiam quia voluptas tempora quibusdam non facere consequatur eum nobis.</p>
+                </div>
+                <div class="grid-item item6">
+                    <h4><span>Programming Languages</span></h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam recusandae aperiam quia voluptas tempora quibusdam non facere consequatur eum nobis.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="contact">
+        <div class="contact-container">
+            <h2>Contact Me</h2>
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="date">Date for Appointment:</label>
+                <input type="date" id="date" name="date" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <button type="submit"><span>Submit</span></button>
+            </form>
+        </div>
+    </section>
+</body>
+
+</html>
